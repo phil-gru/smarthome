@@ -1,0 +1,71 @@
+import time, sys, math, pygame
+from pygame.locals import *
+
+FPS = 30  # update vom bildschirm
+WINWIDTH = 1000
+WINHEIGHT = 1000
+Steinstarty = 15
+
+GREEN = (200, 255, 0)
+WHITE = (255, 255, 255)
+RED = (255, 0, 0)
+Steiny = Steinstarty
+Steinx = 750
+Fall = False
+Beschleunigung = 2
+Zeit = 1
+Links = False
+Rechts = False
+
+pygame.init()
+FPSCLOCK = pygame.time.Clock()
+DISPLAYSURF = pygame.display.set_mode( (WINWIDTH, WINHEIGHT) )
+
+
+def terminate():
+    pygame.quit()
+    sys.exit()
+
+
+while True:
+    pygame.display.update()
+    FPSCLOCK.tick( FPS )
+    DISPLAYSURF.fill( GREEN )
+    pygame.draw.line( DISPLAYSURF, RED, (1500, 900), (0, 900), 4 )
+    pygame.draw.line( DISPLAYSURF, RED, (1500, 150), (0, 150), 4 )
+
+    for event in pygame.event.get():  # event handling loop
+        if event.type == QUIT:
+            terminate()
+
+
+        elif event.type == KEYDOWN:
+            if event.key == K_SPACE:
+                Fall = True
+            if event.key == K_LEFT:
+                Links = True
+            if event.key == K_RIGHT:
+                Rechts = True
+
+        elif event.type == KEYUP:
+            if event.key == K_LEFT:
+                Links = False
+            if event.key == K_RIGHT:
+                Rechts = False
+
+    if Fall == True:
+        Steiny += Beschleunigung * Zeit
+        Zeit += 1
+    if Steiny > WINHEIGHT:
+        Fall = False
+        Steiny = Steinstarty
+        Zeit = 1
+    if Links == True:
+        Steinx -= 5
+    if Rechts == True:
+        Steinx += 5
+
+
+
+
+

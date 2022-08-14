@@ -1,0 +1,284 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+/* General & Collors */
+
+html {
+    background-color: #222222;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    color: #e0c9a3;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+
+/* Footer */
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F9A825;
+    color: white;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+}
+
+
+/* Text Form */
+
+.span {
+    text-align: left;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+span a {
+    color: #e9ab48;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+span a:hover {
+    color: #F9A825;
+    text-decoration: none;
+}
+
+a {
+    color: #202225;
+    font-family: 'Work Sans';
+    text-decoration: none;
+    font-size: 12px;
+}
+
+a:hover {
+    color: #000;
+}
+
+
+/* Header */
+
+header {
+    background: #F9A825;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+
+/* Navigation */
+
+.nav {
+    text-align: center;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 23px;
+    padding-bottom: 10px;
+    position: absolute;
+}
+
+.nav a {
+    text-transform: uppercase;
+    float: left;
+    color: #444;
+    text-align: none;
+    padding: 2% 2%;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav a:hover {
+    color: #000;
+}
+
+.nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background-color: #444;
+    position: relative;
+    top: 25px;
+    width: 100%;
+    transform: scale(0, 1);
+    /* transform-origin: center; */
+    transition: transform ease-in-out 400ms;
+}
+
+.nav a:hover::before {
+    /* width: 100%; */
+    transform: scale(1, 1);
+}
+
+
+/* Media */
+
+@media screen and (max-width: 529px) {
+    .nav a,
+    .nav {
+        float: none;
+        display: block;
+    }
+    .button-login {
+        float: none;
+        display: block;
+    }
+    .column-66,
+    .column-33 {
+        width: 100%;
+        text-align: center;
+    }
+    .section-img {
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 530px) {
+    .button-login {
+        float: right;
+    }
+}
+
+
+/* Pictures */
+
+.logo {
+    width: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.section-img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px rgb(0 0 0 / 50%);
+    filter: brightness(0.75) contrast(1) sepia(0.7) hue-rotate( -5deg) saturate(3.5);
+    transition: filter 2s;
+}
+
+.section-img:hover {
+    filter: none;
+}
+
+
+/* Positons */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 64px;
+}
+
+
+/* Sections */
+
+section {
+    display: block;
+}
+
+section h3 {
+    margin: 1000;
+    font-weight: 100;
+    font-size: 2em;
+    letter-spacing: 0.10em;
+}
+
+.wrapper {
+    /* width: 860px; */
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column-66 {
+    float: left;
+    width: 66.66666%;
+    padding: 20px;
+}
+
+.column-33 {
+    float: left;
+    width: 33.33333%;
+    padding: 20px;
+}
+
+
+/* General Buttons */
+
+.button-login {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 2% 2%;
+    transition-duration: 0.4s;
+    /* float: right; */
+}
+
+.button-login:hover {
+    background-color: #1f1e1e;
+    color: #fff;
+}
+
+.button {
+    background-color: #e9ab48;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #F9A825;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.socialmedia-icons a {
+    color: #202225;
+    font-size: 24px;
+    text-decoration: none;
+    transition: .6s;
+    margin: 8px;
+}
+
+.socialmedia-icons a:hover {
+    color: #000;
+}

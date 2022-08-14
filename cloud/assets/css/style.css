@@ -1,0 +1,133 @@
+/* Imports */
+
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,600');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+/* General & Collors */
+
+html {
+    background-color: #222222;
+}
+
+body {
+    margin: 0;
+    background: #222;
+    color: #e0c9a3;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+}
+
+
+/* Footer */
+
+footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F9A825;
+    color: white;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    text-decoration: none;
+}
+
+
+/* Text Form */
+
+.span {
+    text-align: left;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+span a {
+    color: #e9ab48;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+}
+
+span a:hover {
+    color: #F9A825;
+    text-decoration: none;
+}
+
+a {
+    color: #E7D89B;
+    font-family: 'Work Sans';
+    text-decoration: none;
+    font-size: 12px;
+}
+
+a:hover {
+    color: #000;
+}
+
+
+/* Header */
+
+header {
+    background: #F9A825;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Media */
+
+@media screen and (max-width: 529px) {
+}
+
+@media screen and (min-width: 530px) {
+}
+
+/* Pictures */
+
+/* Positons */
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 64px;
+}
+
+
+/* Sections */
+
+/* General Buttons */
+
+.button {
+    background-color: #e9ab48;
+    border: none;
+    color: #ffffff;
+    padding: 8px 16px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #F9A825;
+    color: #fff;
+    border-radius: 5px;
+		cursor: pointer;
+}
+
+.socialmedia-icons a {
+    color: #202225;
+    font-size: 24px;
+    text-decoration: none;
+    transition: .6s;
+    margin: 8px;
+}
+
+.socialmedia-icons a:hover {
+    color: #000;
+}
